@@ -170,8 +170,7 @@ func Start(funcName interface{}) {
 	goInstance := newGoInstance()
 	err := goInstance.startFunction(function)
 	if err != nil {
-		log.Fatal(err)
-		panic("start function failed, please check.")
+		panic(err.Error())
 	}
 }
 
